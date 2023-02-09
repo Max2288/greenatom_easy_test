@@ -1,3 +1,6 @@
+"""The solution of the third problem."""
+
+
 import requests
 from bs4 import BeautifulSoup
 
@@ -7,7 +10,15 @@ HEADERS = {
 }
 
 
-def find_tags(url: str):
+def find_tags(url: str) -> dict:
+    """Find HTML tags on page.
+
+    Args:
+        url (str): url to page.
+
+    Returns:
+        dict: dictionary with number of all tags and number og tags with attrs.
+    """
     req = requests.get(url, headers=HEADERS)
     soup = BeautifulSoup(req.text, "lxml")
     pars_result = {"all": 0, "with_attrs": 0}
