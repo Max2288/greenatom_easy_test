@@ -18,6 +18,3 @@ def compare_versions(first_version: str, second_version: str) -> int:
         elif int(element_first) < int(element_second):
             return -1
     return 0
-
-
-print(compare_versions('1.10', '1.1'))

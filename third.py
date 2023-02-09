@@ -28,6 +28,3 @@ def find_tags(url: str) -> dict:
             pars_result["with_attrs"] += 1
         pars_result["all"] += 1
     return pars_result
-
-
-print(find_tags('https://greenatom.ru'))

@@ -37,6 +37,3 @@ def add_one(number: int) -> int:
         int: number + 1.
     """
     return number+1
-
-
-execute_handlers(create_handlers(add_one))
